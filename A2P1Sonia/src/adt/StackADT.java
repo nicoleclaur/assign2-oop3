@@ -1,8 +1,8 @@
 package adt;
 
-public interface StackADT<E>
-{
-	/**
+public interface StackADT<E> {
+
+    /**
      * Adds an element to the top of the stack.
      * <p>
      * <b>Pre-condition:</b> The element must not be null.<br>
@@ -17,6 +17,19 @@ public interface StackADT<E>
     boolean push(E element);
 
     /**
+     * Removes and returns the element at the top of the stack.
+     * <p>
+     * <b>Pre-condition:</b> The stack must not be empty.<br>
+     * <b>Post-condition:</b> The top element is removed from the stack.
+     * If the stack is empty, it throws an EmptyStackException.
+     * </p>
+     *
+     * @return The element at the top of the stack.
+     * @throws EmptyStackException if the stack is empty.
+     */
+    E pop();
+
+    /**
      * Compares this stack with another stack to determine equality.
      * <p>
      * <b>Pre-condition:</b> Both stacks must be non-null.<br>
@@ -28,6 +41,32 @@ public interface StackADT<E>
      * @return True if the stacks are equal, otherwise false.
      */
     boolean equals(StackADT<E> that);
+
+    /**
+     * Searches for an element in the stack and returns its index.
+     * <p>
+     * <b>Pre-condition:</b> The element must not be null.<br>
+     * <b>Post-condition:</b> Returns the index of the element if found, or -1 if not found.
+     * </p>
+     *
+     * @param obj The element to search for.
+     * @return The index of the element in the stack if found, otherwise -1.
+     * @throws IllegalArgumentException if the element is null.
+     */
+    int search(E obj);
+
+    /**
+     * Checks whether the stack contains the specified element.
+     * <p>
+     * <b>Pre-condition:</b> The element must not be null.<br>
+     * <b>Post-condition:</b> Returns true if the element is found in the stack, otherwise false.
+     * </p>
+     *
+     * @param obj The element to check for.
+     * @return True if the element is found, otherwise false.
+     * @throws IllegalArgumentException if the element is null.
+     */
+    boolean contains(E obj);
 
     /**
      * Returns an array containing all elements in this stack.
@@ -48,5 +87,5 @@ public interface StackADT<E>
      * @return The filled array with stack elements.
      */
     E[] toArray(E[] copy);
-	
+
 }
