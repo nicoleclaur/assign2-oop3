@@ -1,9 +1,9 @@
-package adt;
+package utilities;
 
 /**
  * QueueADT.java
  * 
- * @author GabrielSiwa, LulubelleFontelo
+ * @author GabrielSiwa, LulubelleFontelo, MitziEscartin, AlessandraClaur
  * 
  * <p>
  * A queue follows the First-In-First-Out (FIFO) principle, meaning elements
