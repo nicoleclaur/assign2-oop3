@@ -1,6 +1,28 @@
 package utilities;
 
-
+/**
+ * 
+ * StackADT.java
+ * A stack is a collection that follows the Last-In-First-Out (LIFO) principle.
+ * Elements are added and removed from the top of the stack.
+ * 
+ * @param <E> The type of elements stored in this stack.
+ * 
+ * <p>
+ * This interface provides methods to:
+ * <ul>
+ *   <li>Push elements onto the stack.</li>
+ *   <li>Pop elements from the top of the stack.</li>
+ *   <li>Compare two stacks for equality.</li>
+ *   <li>Search for elements and check for their presence.</li>
+ *   <li>Convert the stack contents into arrays.</li>
+ * </ul>
+ * </p>
+ * 
+ * <p><b>Note:</b> Implementations must ensure appropriate handling of null values and empty stack conditions.</p>
+ * 
+ * @author GabrielSiwa, LulubelleFontelo, MitziEscartin, AlessandraClaur
+ */
 
 
 public interface StackADT<E> {

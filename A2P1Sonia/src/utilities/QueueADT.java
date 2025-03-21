@@ -5,11 +5,23 @@ package utilities;
  * 
  * @author GabrielSiwa, LulubelleFontelo, MitziEscartin, AlessandraClaur
  * 
- * <p>
  * A queue follows the First-In-First-Out (FIFO) principle, meaning elements
- * are added at the rear and removed from the front. This interface defines
- * the fundamental methods that any queue implementation must support.
+ * are added at the rear and removed from the front.
+ * 
+ * <p>
+ * This interface defines the fundamental operations that any queue
+ * implementation must support, including:
+ * <ul>
+ *   <li>Adding elements to the rear of the queue.</li>
+ *   <li>Removing elements from the front of the queue.</li>
+ *   <li>Peeking at the front element.</li>
+ *   <li>Checking for equality with another queue.</li>
+ *   <li>Searching and checking for elements within the queue.</li>
+ *   <li>Converting the queue contents to an array.</li>
+ * </ul>
  * </p>
+ * 
+ * <p><b>Note:</b> Implementations must ensure appropriate handling of null values and empty queue conditions.</p>
  * 
  * @param <E> The type of elements stored in the Queue.
  */
