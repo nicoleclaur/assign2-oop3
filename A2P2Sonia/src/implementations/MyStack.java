@@ -1,4 +1,5 @@
 package implementations;
+import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 import implementations.MyArrayList;
 import java.io.Serializable;
@@ -23,9 +24,9 @@ public class MyStack<E> implements StackADT<E>, Serializable {
     }
 
     @Override
-    public E pop() throws NoSuchElementException {
+    public E pop() throws EmptyStackException {
         if (isEmpty()) {
-            throw new NoSuchElementException("Stack is empty");
+            throw new EmptyStackException();
         }
 
         int index = list.size() - 1;
@@ -33,9 +34,9 @@ public class MyStack<E> implements StackADT<E>, Serializable {
     }
     
     @Override
-    public E peek() throws NoSuchElementException {
+    public E peek() throws EmptyStackException {
         if (isEmpty()) {
-            throw new NoSuchElementException("Stack is empty");
+            throw new EmptyStackException();
         }
         return list.get(list.size() - 1);
     }
@@ -91,8 +92,7 @@ public class MyStack<E> implements StackADT<E>, Serializable {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return list.size();
 	}
 
 	@Override
